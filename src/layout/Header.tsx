@@ -4,6 +4,7 @@ export const Header = () => {
   const location = useLocation();
   const isCreateEmployeePage = location.pathname === "/create-employee";
   const isEmployeesListPage = location.pathname === "/employees-list";
+  const isErrorPage = location.pathname === "/error404";
 
   return (
     <header className="header">
@@ -29,6 +30,13 @@ export const Header = () => {
               <li className="nav-item">
                 <NavLink to="/" className="nav-link">
                   Create Employee
+                </NavLink>
+              </li>
+            )}
+            {isErrorPage && (
+              <li className="nav-item">
+                <NavLink to="/" className="nav-link">
+                  Return Home
                 </NavLink>
               </li>
             )}

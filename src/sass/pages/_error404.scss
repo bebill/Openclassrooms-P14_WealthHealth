@@ -1,0 +1,31 @@
+@use "../utils/variables";
+
+.error-page {
+    margin: 140px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .error-title {
+        color: variables.$mediumgreen;
+        font-size: 200px;
+        margin: 0;
+    }
+
+    .error-button {
+        text-decoration: none;
+        margin: 50px 0;
+        background-color: variables.$lightgreen;
+        color: variables.$white;
+        border: none;
+        border-radius: 4px;
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: variables.$darkgreen;
+        }
+    }
+}
