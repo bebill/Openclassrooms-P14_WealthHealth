@@ -1,8 +1,9 @@
 {
-  "name": "wealthhealth",
+  "name": "openclassrooms-p14wealthhealth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
     "cssnano": "^6.1.2",
     "cssnano-preset-default": "^6.1.2",
     "nth-check": "^2.0.1",
