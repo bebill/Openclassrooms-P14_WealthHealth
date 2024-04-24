@@ -1,10 +1,21 @@
 import { Employee } from "../interfaces/employeeInterface";
+import { employeeMatchesQuery } from "./search/searchQuery";
 import { TableRow } from "./table/TableRow";
 
 interface EmployeesTableProps {
   employees: Employee[];
+  searchQuery: string;
 }
-export const EmployeesTable = ({ employees }: EmployeesTableProps) => {
+export const EmployeesTable = ({
+  employees,
+  searchQuery,
+}: EmployeesTableProps) => {
+  const filteredEmployees = employees.filter((employee) =>
+    employeeMatchesQuery(employee, searchQuery)
+  );
+
+  const matchesFound = filteredEmployees.length > 0;
+
   return (
     <div>
       <div className="employee-table">
@@ -23,12 +34,15 @@ export const EmployeesTable = ({ employees }: EmployeesTableProps) => {
             </tr>
           </thead>
           <tbody>
-            {employees.map((employee: Employee) => (
-              <TableRow
-                key={employee.lastName + employee.firstName}
-                employee={employee}
-              />
-            ))}
+            {matchesFound ? (
+              filteredEmployees.map((employee: Employee, index: number) => (
+                <TableRow key={index} employee={employee} />
+              ))
+            ) : (
+              <tr>
+                <td colSpan={9}>No matching records found</td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
