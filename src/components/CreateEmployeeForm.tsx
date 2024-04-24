@@ -32,7 +32,6 @@ export const CreateEmployeeForm = () => {
   ) => {
     const { name, value } = e.target;
 
-    // Si le champ appartient à l'objet address
     if (name.startsWith("address.")) {
       const addressField = name.split(".")[1];
       setFormData((prevData) => ({
