@@ -19,7 +19,7 @@ export const TableRow = ({ employee }: RowProps) => {
       ?.abbreviation || employee.address.state;
 
   return (
-    <tr key={employee.lastName + employee.firstName}>
+    <tr className="table-row" key={employee.lastName + employee.firstName}>
       <TableCell value={employee.firstName} />
       <TableCell value={employee.lastName} />
       <TableCell value={formattedStartDate} />

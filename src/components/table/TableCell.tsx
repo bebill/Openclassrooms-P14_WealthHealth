@@ -3,5 +3,5 @@ interface CellProps {
 }
 
 export const TableCell = ({ value }: CellProps) => {
-  return <td>{value}</td>;
+  return <td className="table-cell">{value}</td>;
 };

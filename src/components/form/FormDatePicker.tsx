@@ -14,9 +14,12 @@ export const FormDatePicker = ({
   handleOnChange,
 }: DatePickerProps) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="form-date-picker">
+      <label className="form-label" htmlFor={name}>
+        {label}
+      </label>
       <input
+        className="form-date-picker-field"
         type="date"
         id={name}
         name={name}

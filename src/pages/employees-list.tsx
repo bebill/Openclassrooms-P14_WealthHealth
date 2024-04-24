@@ -10,9 +10,9 @@ export const EmployeesList = () => {
     console.log("Fetched employees:", employeesData);
   }, [employeesData]);
   return (
-    <main>
+    <main className="employees-list-page">
       <div className="employees-list-container">
-        <h2>Current Employees</h2>
+        <h2 className="employees-list-heading">Current Employees</h2>
         <EmployeesTable employees={employeesData} />
       </div>
     </main>

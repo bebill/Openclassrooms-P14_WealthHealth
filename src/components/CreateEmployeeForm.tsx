@@ -72,7 +72,7 @@ export const CreateEmployeeForm = () => {
   };
 
   return (
-    <form id="create-employee" onSubmit={handleSubmit}>
+    <form className="create-employee-form" onSubmit={handleSubmit}>
       <FormInput
         name="firstName"
         label="First Name"

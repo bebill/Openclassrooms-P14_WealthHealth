@@ -3,5 +3,5 @@ interface LabelProps {
 }
 
 export const FormLabel = ({ text }: LabelProps) => {
-  return <span>{text}</span>;
+  return <span className="form-label">{text}</span>;
 };

@@ -3,5 +3,9 @@ interface FormButtonProps {
 }
 
 export const FormButton = ({ label }: FormButtonProps) => {
-  return <button type="submit">{label}</button>;
+  return (
+    <button className="form-button" type="submit">
+      {label}
+    </button>
+  );
 };

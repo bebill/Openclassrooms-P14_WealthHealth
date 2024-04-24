@@ -1,0 +1,69 @@
+@use "../utils/variables";
+
+.employees-list-page {
+    padding: 20px;
+
+    .employees-list-container {
+        padding: 20px;
+        margin: auto;
+        max-width: 1100px;
+
+
+        .employees-list-heading {
+            color: variables.$black;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .employee-table {
+            overflow-x: auto;
+            border-collapse: collapse;
+            width: 100%;
+            border-radius: 8px 8px 0 0;
+            // max-height: 500px;
+            // overflow-y: auto;
+
+            .table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                overflow: hidden;
+
+                .table-header {
+                    background-color: variables.$lightgreen;
+                    color: variables.$white;
+                    font-size: 16px;
+                    padding: 10px;
+                    text-align: left;
+                    // position: -webkit-sticky;
+                    // position: sticky;
+                    // top: 0;
+                }
+
+                .table-row {
+                    transition: background-color 0.3s ease;
+                    cursor: default;
+
+                    &:hover {
+                        background-color: variables.$lightgrey;
+                    }
+
+                    &:nth-child(even) {
+                        background-color: variables.$whitegreen;
+
+                        &:hover {
+                            background-color: variables.$lightgrey;
+                        }
+                    }
+
+                    .table-cell {
+                        border-bottom: 1px solid variables.$mediumgreen;
+                        padding: 10px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

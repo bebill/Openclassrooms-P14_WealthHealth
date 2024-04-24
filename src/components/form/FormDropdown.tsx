@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { FormLabel } from "./FormLabel";
 
 interface DropdownProps {
   label: string;
@@ -16,9 +17,10 @@ export const FormDropdown = ({
   handleOnChange,
 }: DropdownProps) => {
   return (
-    <div>
-      <label>{label}</label>
+    <div className="form-dropdown">
+      <FormLabel text={label} />
       <select
+        className="form-dropdown-field"
         aria-label={label}
         name={name}
         value={value}

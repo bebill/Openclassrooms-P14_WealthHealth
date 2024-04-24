@@ -1,4 +1,5 @@
 import { ChangeEvent } from "react";
+import { FormLabel } from "./FormLabel";
 
 interface InputProps {
   label: string;
@@ -18,9 +19,10 @@ export const FormInput = ({
   handleOnChange,
 }: InputProps) => {
   return (
-    <div>
-      <label>{label}</label>
+    <div className="form-input">
+      <FormLabel text={label} />
       <input
+        className="form-input-field"
         type={type}
         placeholder={placeholder}
         name={name}

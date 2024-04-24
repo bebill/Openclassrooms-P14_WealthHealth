@@ -7,14 +7,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import store from "./redux/utils/store";
-
-import { CreateEmployee } from "./pages/create-employee";
-import { Header } from "./layout/Header";
-// import { Footer } from "./layout/Footer";
-// import { Error404 } from "./pages/error404";
-
-import { EmployeesList } from "./pages/employees-list";
 import { getEmployees } from "./redux/utils/employeesDispatch";
+import { Header } from "./layout/Header";
+import { CreateEmployee } from "./pages/create-employee";
+import { EmployeesList } from "./pages/employees-list";
+// import { Error404 } from "./pages/error404";
+import { Footer } from "./layout/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -29,7 +27,7 @@ const App = () => {
         <Route path="/create-employee" element={<CreateEmployee />} />
         <Route path="/employees-list" element={<EmployeesList />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 };

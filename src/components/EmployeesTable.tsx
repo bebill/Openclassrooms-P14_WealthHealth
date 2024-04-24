@@ -8,18 +8,18 @@ export const EmployeesTable = ({ employees }: EmployeesTableProps) => {
   return (
     <div>
       <div className="employee-table">
-        <table>
+        <table className="table">
           <thead>
             <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Start Date</th>
-              <th>Department</th>
-              <th>Date of Birth</th>
-              <th>Street</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip Code</th>
+              <th className="table-header">First Name</th>
+              <th className="table-header">Last Name</th>
+              <th className="table-header">Start Date</th>
+              <th className="table-header">Department</th>
+              <th className="table-header">Date of Birth</th>
+              <th className="table-header">Street</th>
+              <th className="table-header">City</th>
+              <th className="table-header">State</th>
+              <th className="table-header">Zip Code</th>
             </tr>
           </thead>
           <tbody>
