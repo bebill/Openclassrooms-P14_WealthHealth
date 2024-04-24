@@ -1,4 +1,4 @@
-import { TableCell } from "./tableCell";
+import { TableCell } from "./TableCell";
 import { Employee } from "../../interfaces/employeeInterface";
 import { states } from "../../data/statesData";
 
