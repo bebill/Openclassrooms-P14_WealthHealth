@@ -15,7 +15,7 @@ export const validateForm = (values: Employee) => {
     /^[a-zA-ZàáâãäåçèéêëìíîïðòóôõöùúûüýÿÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÐÒÓÔÕÖÙÚÛÜÝ\s'-]+$/;
   const zipRegex = /^\d{5,10}$/;
 
-  if (firstName === "") {
+  if (!firstName) {
     errors.firstName = "Please enter a first name.";
   } else if (firstName.length < 2) {
     errors.firstName = "First name should be minimum 2 characters.";
@@ -24,7 +24,7 @@ export const validateForm = (values: Employee) => {
       "First name can only contain letters, spaces and « '- ».";
   }
 
-  if (lastName === "") {
+  if (!lastName) {
     errors.lastName = "Please enter a last name.";
   } else if (lastName.length < 2) {
     errors.lastName = "Last name should be minimum 2 characters.";
@@ -40,7 +40,7 @@ export const validateForm = (values: Employee) => {
   const minStartDate = new Date(selectedBirthDate);
   minStartDate.setFullYear(minStartDate.getFullYear() + 14);
 
-  if (birthDate === "") {
+  if (!birthDate) {
     errors.birthDate = "Please select a date.";
   } else if (selectedBirthDate > today) {
     errors.birthDate = "Birth date cannot be in the future.";
@@ -48,7 +48,7 @@ export const validateForm = (values: Employee) => {
     errors.birthDate = "Age should be less than 120 years.";
   }
 
-  if (startDate === "") {
+  if (!startDate) {
     errors.startDate = "Please select a date.";
   } else if (selectedStartDate < selectedBirthDate) {
     errors.startDate = "Start date cannot be prior to birth date.";
@@ -56,7 +56,7 @@ export const validateForm = (values: Employee) => {
     errors.startDate = "Employee should be at least 14 years old.";
   }
 
-  if (street === "") {
+  if (!street) {
     errors.street = "Please enter a street name.";
   } else if (street.length < 2) {
     errors.street = "Street name should be minimum 2 characters.";
@@ -64,7 +64,7 @@ export const validateForm = (values: Employee) => {
     errors.street = "Street name can only contain letters, spaces and « '- ».";
   }
 
-  if (city === "") {
+  if (!city) {
     errors.city = "Please enter a city name.";
   } else if (city.length < 2) {
     errors.city = "City name should be minimum 2 characters.";
@@ -72,7 +72,7 @@ export const validateForm = (values: Employee) => {
     errors.city = "City name can only contain letters, spaces and « '- ».";
   }
 
-  if (zip === "") {
+  if (!zip) {
     errors.zip = "Please enter a zip code.";
   } else if (!/^\d+$/.test(zip)) {
     errors.zip = "Zip code should only contain numbers.";
@@ -80,11 +80,11 @@ export const validateForm = (values: Employee) => {
     errors.zip = "Zip code's length should be between 5 and 10.";
   }
 
-  if (state === "") {
+  if (!state) {
     errors.state = "Please select a state.";
   }
 
-  if (department === "") {
+  if (!department) {
     errors.department = "Please select a departement.";
   }
 
