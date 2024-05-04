@@ -40,7 +40,9 @@ export const EmployeesTable = ({
               ))
             ) : (
               <tr>
-                <td colSpan={9}>No matching records found</td>
+                <td className="table-cell-no-record" colSpan={9}>
+                  No matching records found
+                </td>
               </tr>
             )}
           </tbody>
