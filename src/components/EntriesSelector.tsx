@@ -14,7 +14,7 @@ export const EntriesSelector = ({ onChange }: EntriesSelectorProps) => {
 
   return (
     <div className="entries-per-page-selector">
-      <label htmlFor="entries-per-page">Show</label>
+      <label htmlFor="entries-per-page">Employees per page:</label>
       <select id="entries-per-page" onChange={handleChange}>
         {options.map((option) => (
           <option key={option} value={option}>
@@ -22,7 +22,6 @@ export const EntriesSelector = ({ onChange }: EntriesSelectorProps) => {
           </option>
         ))}
       </select>
-      <p>entries</p>
     </div>
   );
 };

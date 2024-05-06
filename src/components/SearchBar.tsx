@@ -15,6 +15,7 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
 
   return (
     <div className="search-bar">
+      <i className="fa-solid fa-magnifying-glass"></i>{" "}
       <input
         type="text"
         placeholder="Search..."
