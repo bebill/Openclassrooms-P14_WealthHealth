@@ -9,12 +9,17 @@ interface EmployeesTableProps {
   employees: Employee[];
   searchQuery: string;
   entryQuery: number;
+  paginationQuery: number;
+  currentPage: number;
+  onPageChange: (page: number) => void;
 }
 
 export const EmployeesTable = ({
   employees,
   searchQuery,
   entryQuery,
+  paginationQuery,
+  currentPage,
 }: EmployeesTableProps) => {
   const [sortedColumn, setSortedColumn] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc" | "original">(
@@ -58,8 +63,12 @@ export const EmployeesTable = ({
     }
   };
 
+  const startIndex = (currentPage - 1) * paginationQuery;
+  const displayedEmployees = sortedEmployees.slice(
+    startIndex,
+    startIndex + paginationQuery
+  );
   const matchesFound = sortedEmployees.length > 0;
-  const displayedEmployees = sortedEmployees.slice(0, entryQuery);
 
   return (
     <div>

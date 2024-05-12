@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface PaginationProps {
   entriesPerPage: number;
@@ -14,8 +14,6 @@ export const Pagination = ({
   onPageChange,
 }: PaginationProps) => {
   const totalPages = Math.ceil(totalEntries / entriesPerPage);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const startIndex = (currentPage - 1) * entriesPerPage + 1;
   const endIndex =
@@ -36,8 +34,13 @@ export const Pagination = ({
   ) => {
     const selectedPage = parseInt(event.target.value);
     onPageChange(selectedPage);
-    setIsDropdownOpen(false);
   };
+
+  const selectPage = Array.from(Array(totalPages).keys()).map((page) => (
+    <option key={page + 1} value={page + 1}>
+      {page + 1}
+    </option>
+  ));
 
   return (
     totalEntries > 0 && (
@@ -58,15 +61,11 @@ export const Pagination = ({
             Page{" "}
             <select
               className="pagination-dropdown"
+              title="Select a page"
               value={currentPage}
               onChange={handleDropdownChange}
-              title="Select a page"
             >
-              {Array.from(Array(totalPages).keys()).map((page) => (
-                <option key={page + 1} value={page + 1}>
-                  {page + 1}
-                </option>
-              ))}
+              {selectPage}
             </select>{" "}
             / {totalPages}
           </span>
