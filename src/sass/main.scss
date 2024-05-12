@@ -5,6 +5,10 @@
 @use "./layout/footer";
 @use "./layout/header";
 
+@use "./components/search";
+@use "./components/entries";
+@use "./components/pagination";
+
 @use "./pages/create-employee";
 @use "./pages/employees-list";
 @use "./pages/error404";

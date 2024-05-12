@@ -29,16 +29,21 @@
                 border-collapse: separate;
                 border-spacing: 0;
                 overflow: hidden;
+                table-layout: fixed;
 
                 .table-header {
                     background-color: variables.$lightgreen;
                     color: variables.$white;
-                    font-size: 16px;
+                    font-size: 15px;
                     padding: 10px;
                     text-align: left;
                     // position: -webkit-sticky;
                     // position: sticky;
                     // top: 0;
+
+                    i {
+                        font-size: 12px;
+                    }
                 }
 
                 .table-row {
@@ -60,10 +65,26 @@
                     .table-cell {
                         border-bottom: 1px solid variables.$mediumgreen;
                         padding: 10px;
-                        font-size: 15px;
+                        font-size: 12px;
+                        text-align: left;
                     }
+
+                }
+
+                .table-cell-no-record {
+                    text-align: center;
+                    border-bottom: 1px solid variables.$mediumgreen;
+                    padding: 10px;
+                    font-size: 15px;
                 }
             }
         }
     }
+}
+
+.employees-list-functionalities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }

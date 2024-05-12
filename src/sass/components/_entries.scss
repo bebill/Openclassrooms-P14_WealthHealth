@@ -1,0 +1,22 @@
+@use "../utils/variables";
+
+
+.entries-per-page-selector {
+    label {
+        color: variables.$mediumgrey;
+    }
+
+    select {
+        font-size: 15px;
+        color: variables.$mediumgrey;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
