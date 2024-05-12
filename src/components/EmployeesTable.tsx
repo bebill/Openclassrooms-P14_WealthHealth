@@ -8,11 +8,13 @@ import { employeeMatchesQuery } from "./search/searchQuery";
 interface EmployeesTableProps {
   employees: Employee[];
   searchQuery: string;
+  entryQuery: number;
 }
 
 export const EmployeesTable = ({
   employees,
   searchQuery,
+  entryQuery,
 }: EmployeesTableProps) => {
   const [sortedColumn, setSortedColumn] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<"asc" | "desc" | "original">(
@@ -39,7 +41,7 @@ export const EmployeesTable = ({
     }
 
     setSortedEmployees(sortedEmployeesCopy);
-  }, [employees, searchQuery, sortedColumn, sortOrder]);
+  }, [employees, searchQuery, sortedColumn, sortOrder, entryQuery]);
 
   const handleSort = (header: string) => {
     if (header === sortedColumn) {
@@ -57,6 +59,7 @@ export const EmployeesTable = ({
   };
 
   const matchesFound = sortedEmployees.length > 0;
+  const displayedEmployees = sortedEmployees.slice(0, entryQuery);
 
   return (
     <div>
@@ -70,7 +73,7 @@ export const EmployeesTable = ({
           />
           <tbody>
             {matchesFound ? (
-              sortedEmployees.map((employee: Employee, index: number) => (
+              displayedEmployees.map((employee: Employee, index: number) => (
                 <TableRow key={index} employee={employee} />
               ))
             ) : (
