@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Employee } from "../interfaces/employeeInterface";
-import { TableHeader, tableHeaders } from "./table/TableHeader";
-import { TableRow } from "./table/TableRow";
-import { sortAndFilterEmployees } from "./sortEmployees";
-import { employeeMatchesQuery } from "./search/searchQuery";
+import { Employee } from "../../interfaces/employeeInterface";
+import { TableHeader, tableHeaders } from "./TableHeader";
+import { TableRow } from "./TableRow";
+import { sortAndFilterEmployees } from "../utils/sortEmployees";
+import { employeeMatchesQuery } from "../utils/search";
 
 interface EmployeesTableProps {
   employees: Employee[];

@@ -1,5 +1,5 @@
-import { Employee } from "../interfaces/employeeInterface";
-import { employeeMatchesQuery } from "./search/searchQuery";
+import { Employee } from "../../interfaces/employeeInterface";
+import { employeeMatchesQuery } from "./search";
 
 const compareEmployees = (
   employees: Employee[],

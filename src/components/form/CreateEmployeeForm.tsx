@@ -1,14 +1,14 @@
 import { FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addEmployee } from "../redux/slices/employeeSlice";
-import { states } from "../data/statesData";
-import { Employee } from "../interfaces/employeeInterface";
-import { FormInput } from "./form/FormInput";
-import { FormButton } from "./form/FormButton";
-import { FormDropdown } from "./form/FormDropdown";
-import { FormDatePicker } from "./form/FormDatePicker";
-import { validateForm } from "./form/formValidation";
-import { FormError } from "./form/FormError";
+import { addEmployee } from "../../redux/slices/employeeSlice";
+import { states } from "../../data/statesData";
+import { Employee } from "../../interfaces/employeeInterface";
+import { FormInput } from "./FormInput";
+import { FormButton } from "./FormButton";
+import { FormDropdown } from "./FormDropdown";
+import { FormDatePicker } from "./FormDatePicker";
+import { validateForm } from "../utils/formValidation";
+import { FormError } from "./FormError";
 
 export const CreateEmployeeForm = () => {
   const dispatch = useDispatch();

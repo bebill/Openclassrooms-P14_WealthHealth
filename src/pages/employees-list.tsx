@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectEmployees } from "../redux/utils/selectors";
-import { EmployeesTable } from "../components/EmployeesTable";
-import { SearchBar } from "../components/SearchBar";
-import { EntriesSelector } from "../components/EntriesSelector";
-import { employeeMatchesQuery } from "../components/search/searchQuery";
-import { Pagination } from "../components/Pagination";
+import { EmployeesTable } from "../components/table/EmployeesTable";
+import { SearchBar } from "../components/search/SearchBar";
+import { EntriesSelector } from "../components/entries/EntriesSelector";
+import { employeeMatchesQuery } from "../components/utils/search";
+import { Pagination } from "../components/pagination/Pagination";
 
 export const EmployeesList = () => {
   const employeesData = useSelector(selectEmployees);
