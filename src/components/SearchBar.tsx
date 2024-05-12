@@ -13,15 +13,31 @@ export const SearchBar = ({ onSearch }: SearchBarProps) => {
     onSearch(value);
   };
 
+  const handleClear = () => {
+    setQuery("");
+    onSearch("");
+  };
+
   return (
     <div className="search-bar">
-      <i className="fa-solid fa-magnifying-glass"></i>{" "}
-      <input
-        type="text"
-        placeholder="Search..."
-        value={query}
-        onChange={handleChange}
-      />
+      <div className="search-input-wrapper">
+        <i className="fa-solid fa-magnifying-glass"></i>{" "}
+        <input
+          type="text"
+          placeholder="Search..."
+          value={query}
+          onChange={handleChange}
+        />
+        {query && (
+          <button
+            className="clear-button"
+            title="Clear Search"
+            onClick={handleClear}
+          >
+            <i className="fa-solid fa-times"></i>
+          </button>
+        )}
+      </div>
     </div>
   );
 };
