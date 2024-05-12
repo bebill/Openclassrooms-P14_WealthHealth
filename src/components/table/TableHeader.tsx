@@ -55,33 +55,3 @@ export const TableHeader = ({
     </thead>
   );
 };
-
-// interface HeaderProps {
-//   headers: string[];
-// }
-
-// export const tableHeaders = [
-//   "First Name",
-//   "Last Name",
-//   "Start Date",
-//   "Department",
-//   "Date of Birth",
-//   "Street",
-//   "City",
-//   "State",
-//   "Zip Code",
-// ];
-
-// export const TableHeader = ({ headers }: HeaderProps) => {
-//   return (
-//     <thead>
-//       <tr>
-//         {headers.map((header, index) => (
-//           <th key={index} className="table-header">
-//             {header}
-//           </th>
-//         ))}
-//       </tr>
-//     </thead>
-//   );
-// };
