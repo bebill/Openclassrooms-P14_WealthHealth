@@ -26,6 +26,9 @@ export const FormDropdown = ({
         value={value}
         onChange={handleOnChange}
       >
+        <option disabled value="">
+          Select an option:
+        </option>
         {options.map((option, index) => (
           <option key={index} value={option}>
             {option}
