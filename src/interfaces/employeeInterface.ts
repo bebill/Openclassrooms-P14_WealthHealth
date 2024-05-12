@@ -8,6 +8,8 @@ export interface Employee {
     city: string;
     state: string;
     zip: string;
+    [key: string]: any;
   };
   department: string;
+  [key: string]: any;
 }
