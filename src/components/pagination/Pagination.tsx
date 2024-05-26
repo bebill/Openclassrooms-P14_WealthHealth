@@ -55,15 +55,14 @@ export const Pagination = ({
             onClick={goToPreviousPage}
             disabled={currentPage === 1}
           >
-            <i className="fa-solid fa-chevron-left"></i>
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              <path fill="none" d="M0 0h20v20H0z" />
+            </svg>
           </button>
           <span>
             Page{" "}
-            <label htmlFor="page-select" className="sr-only">
-              Select page number
-            </label>
             <select
-              id="page-select"
               className="pagination-dropdown"
               name="Select a page"
               aria-label="Select page number"
@@ -80,7 +79,10 @@ export const Pagination = ({
             onClick={goToNextPage}
             disabled={currentPage === totalPages}
           >
-            <i className="fa-solid fa-chevron-right"></i>
+            <svg width="19" height="19" viewBox="0 0 20 20">
+              <path d="M10 17l5-5-5-5 1.41-1.41L17.83 12l-6.42 6.42L10 17z" />
+              <path fill="none" d="M0 0h20v20H0V0z" />
+            </svg>
           </button>
         </div>
       </div>

@@ -12,7 +12,7 @@ export const Header = () => {
         <Link to="/" className="logo-link">
           <img
             className="logo"
-            src={`${process.env.PUBLIC_URL}/wealthhealth_logo.png`}
+            src={`${process.env.PUBLIC_URL}/wealthhealth_logo.webp`}
             alt="Logo Wealth Health"
           />
         </Link>
