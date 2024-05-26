@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Openclassrooms-P14_WealthHealth/static/css/main.cd68b380.css",
+    "main.js": "/Openclassrooms-P14_WealthHealth/static/js/main.b649bdce.js",
+    "static/js/488.8dabef9d.chunk.js": "/Openclassrooms-P14_WealthHealth/static/js/488.8dabef9d.chunk.js",
+    "index.html": "/Openclassrooms-P14_WealthHealth/index.html",
+    "main.cd68b380.css.map": "/Openclassrooms-P14_WealthHealth/static/css/main.cd68b380.css.map",
+    "main.b649bdce.js.map": "/Openclassrooms-P14_WealthHealth/static/js/main.b649bdce.js.map",
+    "488.8dabef9d.chunk.js.map": "/Openclassrooms-P14_WealthHealth/static/js/488.8dabef9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd68b380.css",
+    "static/js/main.b649bdce.js"
+  ]
+}
