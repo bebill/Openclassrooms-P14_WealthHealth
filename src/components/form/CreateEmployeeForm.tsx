@@ -9,6 +9,7 @@ import { FormDropdown } from "./FormDropdown";
 import { FormDatePicker } from "./FormDatePicker";
 import { validateForm } from "../utils/formValidation";
 import { FormError } from "./FormError";
+import { Modal } from "bld-typescript-react-modal";
 
 export const CreateEmployeeForm = () => {
   const dispatch = useDispatch();
@@ -49,6 +50,7 @@ export const CreateEmployeeForm = () => {
     }
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formErrors = validateForm(formData);
@@ -68,9 +70,21 @@ export const CreateEmployeeForm = () => {
         },
         department: "",
       });
+      openModal();
     }
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    handleSubmit(e as unknown as FormEvent<HTMLFormElement>);
+  };
   return (
     <form className="create-employee-form" onSubmit={handleSubmit}>
       <FormInput
@@ -160,7 +174,23 @@ export const CreateEmployeeForm = () => {
         handleOnChange={handleChange}
       />
       <FormError errorMsg={errors.department} />
-      <FormButton label="Save" />{" "}
+      <FormButton onClick={handleButtonClick} label="Save" />{" "}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        content={<p>Employee Created!</p>}
+        className="modal-content"
+        closeButton
+        customCloseButton="×"
+        width="300px"
+        height="100px"
+        ariaLabel="Modal label"
+        ariaLabelledBy="modal-title"
+        ariaDescribedBy="modal-description"
+        role="dialog"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+      />
     </form>
   );
 };

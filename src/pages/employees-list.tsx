@@ -52,6 +52,7 @@ export const EmployeesList = () => {
           currentPage={currentPage}
           onPageChange={handlePageChange}
         />
+        {/* @ts-ignore */}
         <Pagination
           entriesPerPage={entriesPerPage}
           totalEntries={totalFilteredEntries}

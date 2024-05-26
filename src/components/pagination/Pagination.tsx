@@ -59,9 +59,14 @@ export const Pagination = ({
           </button>
           <span>
             Page{" "}
+            <label htmlFor="page-select" className="sr-only">
+              Select page number
+            </label>
             <select
+              id="page-select"
               className="pagination-dropdown"
-              title="Select a page"
+              name="Select a page"
+              aria-label="Select page number"
               value={currentPage}
               onChange={handleDropdownChange}
             >

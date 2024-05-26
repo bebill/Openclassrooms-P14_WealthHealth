@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
+    "bld-typescript-react-modal": "^1.0.2",
     "cssnano": "^6.1.2",
     "cssnano-preset-default": "^6.1.2",
     "nth-check": "^2.0.1",
@@ -16,7 +17,7 @@
     "redux": "^5.0.1",
     "sass": "^1.74.1",
     "svgo": "^3.2.0",
-    "typescript": "5.4.4",
+    "typescript": "^4.9.5",
     "web-vitals": "3.5.2",
     "webpack": "^5.9.0"
   },
